@@ -1,0 +1,66 @@
+﻿@page
+@model RecruitCatLakshmmr.Pages.Companies.IndexModel
+
+@{
+    ViewData["Title"] = "All Companies";
+}
+
+<h1>All Companies</h1>
+
+<p>
+    <a asp-page="Create">Create New Company</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Company[0].CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company[0].CompanyEmailId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company[0].CompanyUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company[0].PositionName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company[0].IsPositionAvailable)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Company)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyEmailId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PositionName)
+                </td>
+                <td>
+                    @if (item.IsPositionAvailable)
+                    {
+                        <span>Yes</span>
+
+                    }
+                    else
+                    {
+                        <span>No</span>
+                    }
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.CompanyId">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.CompanyId">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.CompanyId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

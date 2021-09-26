@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/madhuri/Desktop/week2 task 3/RecruitCatLakshmmr/RecruitCatLakshmmr/RecruitCatLakshmmr.csproj": {}
+    "/Users/madhuri/Documents/GitHub/IS7012/RecruitCatLakshmmr/RecruitCatLakshmmr/RecruitCatLakshmmr.csproj": {}
   },
   "projects": {
-    "/Users/madhuri/Desktop/week2 task 3/RecruitCatLakshmmr/RecruitCatLakshmmr/RecruitCatLakshmmr.csproj": {
+    "/Users/madhuri/Documents/GitHub/IS7012/RecruitCatLakshmmr/RecruitCatLakshmmr/RecruitCatLakshmmr.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/madhuri/Desktop/week2 task 3/RecruitCatLakshmmr/RecruitCatLakshmmr/RecruitCatLakshmmr.csproj",
+        "projectUniqueName": "/Users/madhuri/Documents/GitHub/IS7012/RecruitCatLakshmmr/RecruitCatLakshmmr/RecruitCatLakshmmr.csproj",
         "projectName": "RecruitCatLakshmmr",
-        "projectPath": "/Users/madhuri/Desktop/week2 task 3/RecruitCatLakshmmr/RecruitCatLakshmmr/RecruitCatLakshmmr.csproj",
+        "projectPath": "/Users/madhuri/Documents/GitHub/IS7012/RecruitCatLakshmmr/RecruitCatLakshmmr/RecruitCatLakshmmr.csproj",
         "packagesPath": "/Users/madhuri/.nuget/packages/",
-        "outputPath": "/Users/madhuri/Desktop/week2 task 3/RecruitCatLakshmmr/RecruitCatLakshmmr/obj/",
+        "outputPath": "/Users/madhuri/Documents/GitHub/IS7012/RecruitCatLakshmmr/RecruitCatLakshmmr/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/madhuri/.config/NuGet/NuGet.Config"
@@ -37,6 +37,26 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Gtt.Uc.EntityFramework": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.18, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.18, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

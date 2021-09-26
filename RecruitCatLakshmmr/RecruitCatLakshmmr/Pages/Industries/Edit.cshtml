@@ -1,0 +1,42 @@
+﻿@page
+@model RecruitCatLakshmmr.Pages.Industries.EditModel
+{
+    ViewData["Title"] = "Edit Industry";
+}
+
+<h4>Edit @Html.DisplayFor(model => model.Industry.IndustryName)</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Industry.IndustryId" />
+            <div class="form-group">
+                <label asp-for="Industry.IndustryName" class="control-label"></label>
+                <input asp-for="Industry.IndustryName" class="form-control" />
+                <span asp-validation-for="Industry.IndustryName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Industry.IndustrySector" class="control-label"></label>
+                <input asp-for="Industry.IndustrySector" class="form-control" />
+                <span asp-validation-for="Industry.IndustrySector" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Industry.AverageSalary" class="control-label"></label>
+                <input asp-for="Industry.AverageSalary" class="form-control" />
+                <span asp-validation-for="Industry.AverageSalary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

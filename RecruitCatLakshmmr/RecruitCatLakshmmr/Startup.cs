@@ -7,7 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
+using Microsoft.EntityFrameworkCore;
+using RecruitCatLakshmmr.Data;
+using Gtt.Uc.EntityFramework;
 namespace RecruitCatLakshmmr
 {
     public class Startup
@@ -23,6 +25,10 @@ namespace RecruitCatLakshmmr
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+/*
+            services.AddDbContext<RecruitCatLakshmmrContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("RecruitCatLakshmmrContext")));*/
+            services.AddGttMem<RecruitCatLakshmmrContext>("cc9b1752-7550-4cfb-b4e9-a0e197be3eb4");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
